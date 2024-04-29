@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(`/api`, rutasNovel)
 
+app.use(`/public`, express.static(`${__dirname}/uploads`))
 
 // RUTAS, ENDPOINTS
 app.get(`/`, (req, res) => {

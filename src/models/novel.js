@@ -24,7 +24,15 @@ const novelSchema = mongoose.Schema({
     language: {
         type: String,
         required: true
+    },
+    picture: {
+        type: String,
+        required: true
     }
 });
+
+novelSchema.methods.setImgUrl = function setImgUrl(filename) {
+    this.picture = `public/${filename}`
+}
 
 module.exports = mongoose.model(`Novel`, novelSchema)
