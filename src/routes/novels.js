@@ -29,15 +29,25 @@ router.get(`/novels`, (req, res) => {
 
 // Actualizar novela por ID
 
-router.put(`/novels/:id`, (req, res) => {
+router.put(`/novels/:id`, upload.single(`image`), (req, res) => {
     const { id } = req.params;
     const { name, author, genre, publishedYear, pages, language, picture } = 
     req.body;
+
+    /* const novel = novelSchema(req.body)
+
+    
+    if(req.file) {
+        const { filename } = req.file
+        novel.setImgUrl(filename)
+    } */
 
     novelSchema
     .updateOne({_id: id}, {$set: {name, author, genre, publishedYear, pages, language, picture}})
     .then((data)=> res.json(data))
     .catch((error) => res.json({message:(error)}))
+
+    
 });
 
 // Eliminar novela
