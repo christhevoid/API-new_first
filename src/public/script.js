@@ -13,7 +13,8 @@ document.addEventListener(`DOMContentLoaded`, () => {
         if(res.status==200) {
             console.log(res);
             var noveldata = res.data;
-            console.log(noveldata)
+            console.log(noveldata) // Esta es el JSON de todas las novelas agregadas
+            console.log(noveldata[1])
             console.log(noveldata[0].picture)
             console.log(noveldata[1].picture)
 
@@ -21,21 +22,48 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
             for(var i = 0; i < noveldata.length; i++) {
 
-                var elementDiv = document.createElement(`div`)
-                elementDiv.classList.add(`flex-item`)
+                // 1. Crear div.flexitem
+                var item = document.createElement(`a`)
+                item.classList.add(`flex-item`)
+                item.href = `#`;
 
+                // 2. Crear imagen y modificar imagen (src)
                 var imagen = document.createElement(`img`);
-
-                
 
                 var imageUrl = /* 'http://localhost:9000/' +  */noveldata[i].picture;
                 imagen.src = imageUrl;
 
+                // 3. Crear nombre de la novela
+                var nameTitle = document.createElement(`p`);
+                nameTitle.textContent = noveldata[i].name;
+
+                // 3. Introducir imagen 
+
+                item.appendChild(imagen);
+                item.appendChild(nameTitle);
+
+                flexbox.appendChild(item);
+
                 
+                // Usamos una clousure (function(index) {}) (i) )
+                
+                (function(index) {
+                    item.addEventListener(`click`, function() {
+                        console.log(noveldata[index])
+                        var infoNovel = JSON.stringify(noveldata[index]);
+                        localStorage.setItem(`novel_data`, infoNovel)
+                        window.location.replace(`/novel.html?id=${noveldata[index]._id}`)
+                    })
+                } (i))
 
-                elementDiv.appendChild(imagen);
-                flexbox.appendChild(elementDiv);
-
+                /* (function(index) {
+                    divArticulo.addEventListener(`click`, function() {
+                        console.log(data.items[index]);
+                        var infoElement = JSON.stringify(data.items[index]);
+                        localStorage.setItem(`selectedItem`, infoElement)
+                        window.location.replace(`../HTML/element.html`)
+                    });
+                })(i); */
                 
             }
         }

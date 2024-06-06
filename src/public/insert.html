@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body id="Q-body_insert">
+
+        <div id="nav">
+            <div id="nav-container">
+                <a href="/" class="nav-items">
+                    <p>Inicio</p>
+                </a>
+                <a href="/" class="nav-items">
+                    <p>Biblioteca</p>
+                </a>
+                <a href="/" class="nav-items">
+                    <p>Populares</p>
+                </a>
+                <a href="/" class="nav-items">
+                    <p>Login</p>
+                </a>
+            </div>
+        </div>
+        
+        <div id="form-container">
+
+            <form id="novelForm" enctype="multipart/form-data">
+
+                <h2 id="Insert-title">Add novel</h2>
+
+                <input type="text" name="name" class="input" placeholder="Name">
+                <input type="text" name="author" class="input" placeholder="Author">
+                <input type="text" name="genre" class="input" placeholder="Genre">
+                <input type="text" name="publishedYear" class="input" placeholder="Published Year">
+                <input type="number" name="pages" class="input" placeholder="Pages">
+                <input type="language" name="language" class="input" placeholder="Language">
+                <textarea name="description" class="input" id="description" placeholder="Description"></textarea>
+
+                <!-- Seleccionar la imagen de mi maquina local -->
+
+                <div id="img-selector-container">
+                    <p>Select image: </p>
+                    <label for="files" class="label-image-upload" id="label-image-upload-id">
+                        Choose Image
+                    </label>
+                    <input type="file" name="image" id="files" accept="image/*">
+                </div>
+
+                
+
+                <!-- Para ver el nombre de la imagen seleccionada -->
+
+                <!-- <p id="fileName"></p> -->
+
+                <input id="submit-button" type="submit" value="Add Novel">
+
+
+            </form>
+
+        </div>
+
+    </body>
+    <script src="/insert.js"></script>
+</html>
