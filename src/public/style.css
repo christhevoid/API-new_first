@@ -285,7 +285,7 @@ input[type="file"] {
     display: flex;
 
     background: transparent;
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(40px);
     filter: brightness(1.2);
 
     /* flex-wrap: wrap; */
@@ -364,8 +364,22 @@ input[type="file"] {
         width: 100%;
         height: auto;
         margin: 0;
+        margin-top: 20px;
         /* border: 3px solid black; */
     
+    }
+
+    #data-container h2 {
+        margin: 17px 0 20px 3%;
+    
+        color: white;
+    }
+
+    #data-container p {
+        width: 94%;
+        margin: 0 3% 0 3%;
+    
+        color: white;
     }
 }
 
@@ -377,3 +391,178 @@ input[type="file"] {
     background-attachment: fixed;
     background-position: center center;
 }
+
+#search-container {
+    margin: 20px 6.8%;
+
+    /* border: 1px solid white; */
+    border-radius: 12px;
+    background: transparent; 
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.addNovel {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* border: 2px solid white; */
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.addNovel:hover {
+    background-color: rgba(240, 248, 255, 0.192);
+}
+
+.addNovel img {
+    width: 55px;
+    padding: 3px 0;
+}
+
+.addNovel p {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+#search-container p {
+    color: white;
+    padding: 10px 10px;
+}
+
+
+/* button#button-submit {
+    background: none;
+    border: none;
+} */
+
+
+.search-container {
+    width: 80%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient(rgba(0,9,51,0.9),rgba(0,8,51,0.9)), url(/pic/dark-world.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    backdrop-filter: blur(4px) saturate(180%);
+    margin: 20px 0;
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1; /*Permite crecer al elemento tanto como sea su padre*/
+    border: 0;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+}
+
+.search-bar input::placeholder {
+    color: #cac7ff;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #58629b;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar button img {
+    width: 25px;
+}
+
+/* __________________ updelNovelData __________________ */
+
+#novels_data_up {
+    margin: 20px 6.8%;
+
+    border: 1px solid white;
+    border-radius: 12px;
+    background: transparent; 
+    backdrop-filter: blur(4px);
+
+}
+
+.flex-item-updel {
+    display: flex;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+
+    margin: 20px 20px;
+
+    border: 2px solid white;
+}
+
+.flex-item-updel img {
+    width: 220px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.data {
+    width: calc(100% - 20px);
+}
+
+.data p {
+    color: white;
+    margin: 0 0 0 30px;
+}
+
+.data p.data-title {
+    margin: 15px 30px 0 30px;
+    color: white;
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+}
+
+
+.opciones {
+    margin: 40px 0 0 30px;
+}
+
+
+.opciones a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    margin: 0 20px 0 0;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.opciones a:hover {
+    background-color: rgba(240, 248, 255, 0.2);
+}
+
+
+
+
+
+

@@ -56,6 +56,7 @@ novelFormHTML.addEventListener(`submit`, function(event) {
         if(res.status==200) {
             console.log(res);
             console.log("¡Novela añadida correctamente!")
+            alert(`Se ha agregado la novela correctamente`)
             novelFormHTML.reset();
         } else {
             console.log(`Error al insertar novela`)

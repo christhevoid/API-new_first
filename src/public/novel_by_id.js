@@ -66,7 +66,7 @@ document.addEventListener(`DOMContentLoaded`, function() {
 
         // Descripción
         var description = document.getElementById(`description`);
-        description.innerHTML = `<b>Descriptción: </b>${novelInfo.description}`
+        description.innerHTML = `<b>Descripción: </b>${novelInfo.description}`
 
         // Paginas
         var pages = document.getElementById(`numPages`);
