@@ -323,11 +323,33 @@ input[type="file"] {
 }
 
 
-
 #data-container p {
-    margin: 0px 0 0px 22px;
+    margin: 0 0 0 22px;
 
     color: white;
+}
+
+#divback {
+    margin: 16px 0 20px 22px;
+    display: none;
+}
+
+#data-container a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    /* cursor: pointer; */
+    transition: 0.3s ease;
+}
+
+#data-container a:hover {
+    background: rgba(240, 248, 255, 0.2);
 }
 
 @media (max-width: 500px) {
@@ -380,6 +402,10 @@ input[type="file"] {
         margin: 0 3% 0 3%;
     
         color: white;
+    }
+
+    #divback {
+        margin: 16px 0 20px 3%;
     }
 }
 
@@ -440,7 +466,7 @@ input[type="file"] {
 } */
 
 
-.search-container {
+/* .search-container {
     width: 80%;
     min-height: 100vh;
     padding: 5%;
@@ -450,7 +476,7 @@ input[type="file"] {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .search-bar {
     width: 100%;
@@ -466,7 +492,7 @@ input[type="file"] {
 
 .search-bar input {
     background: transparent;
-    flex: 1; /*Permite crecer al elemento tanto como sea su padre*/
+    flex: 1; 
     border: 0;
     outline: none;
     padding: 10px 20px;
@@ -561,6 +587,288 @@ input[type="file"] {
     background-color: rgba(240, 248, 255, 0.2);
 }
 
+/* ____________________ POPUP-DEL ________________*/
+
+.curtain {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s;
+    /* filter: blur(6px);
+    pointer-events: none;
+    user-select: none; */
+}
+
+.curtain.blur {
+    filter: blur(3px);
+    pointer-events: none;
+    user-select: none;
+}
+
+.popup-del {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: transparent;
+    filter: blur(0px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border: 2px solid white;
+}
+
+.popup-del.visible {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.popup-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.popup-del-form {
+    margin: 18px 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.popup-del-form #del-input-text {
+    background: transparent;
+    /* flex: 1;  */
+    border: 2px solid white;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #cac7ff;
+    height: 44px;
+    width: 228px;
+}
+
+/* pointer-events: para que no active ningun evento al hacer click o pasar el ratón 
+user-select: none: para que el usuario no pueda selecccionar el texto*/
+.del-input-submit {
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    padding: 10px 10px;
+    font-size: 20px;
+    color: #cac7ff;
+    height: 44px;
+    width: 100px;
+    margin-right: 4px;
+    pointer-events: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.del-input-submit.deleteable {
+    pointer-events: auto;
+    user-select: auto;
+    background: rgba(255, 11, 11, 0.5);
+    color: #fff;
+}
+
+
+.del-input-submit:hover {
+    background: rgba(255, 11, 11, 0.776);
+    color: #fff;
+}
+
+a.btn-back {
+    display: inline-block;
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #cac7ff;
+    height: 44px;
+    width: 150px;
+    text-align: center;
+}
+
+a.btn-back:hover {
+    background: rgba(240, 248, 255, 0.2);
+    color: #fff;
+}
+
+.popup-del h2 {
+    color: white;
+}
+
+.popup-del p {
+    color: white;
+}
+
+/* Si popup-del tiene 600px */
+@media (max-width: 630px) {
+    .popup-del {
+        width: 512px;
+    }
+
+    .popup-del-form {
+        flex-direction: column;
+    }
+
+    .popup-del-form #del-input-text {
+        width: 100%;
+    }
+
+    .popup-del-options {
+        display: flex;
+        margin-top: 12px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #search-container {
+        margin: 20px 6.8%;
+    
+        /* border: 1px solid white; */
+        border-radius: 12px;
+        background: transparent; 
+        backdrop-filter: blur(4px);
+    
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .search-bar {
+        width: 97.5%;
+    }
+
+    .flex-item-updel {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        min-height: calc(100% - 40px);
+
+        margin: 20px 20px;
+
+        border: 2px solid white;
+    }
+
+    .img-container-updel {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* border: 2px solid red; */
+        
+    }
+
+    .opciones {
+        margin: 40px 0 12px 30px;
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid red; */
+    }
+
+    .opciones a {
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        border: 2px solid white;
+        margin: 0 20px 10px 0;
+        padding: 15px 25px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* POPUP-DEL */
+    
+    .popup-del {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 445px;
+        padding: 30px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+        background: transparent;
+        filter: blur(0px);
+        /* visibility: hidden; */
+        /* opacity: 0; */
+        transition: 0.5s;
+        border: 2px solid white;
+    }
+
+    .popup-del-form {
+        margin: 18px 0 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .popup-del-form #del-input-text {
+        background: transparent;
+        /* flex: 1;  */
+        border: 2px solid white;
+        outline: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        color: #cac7ff;
+        height: 44px;
+        width: 100%;
+    }
+
+    .popup-del-options {
+        display: flex;
+        margin-top: 12px;
+        justify-content: space-between;
+    }
+    
+    .popup-del-form #del-input-submit {
+        background: transparent;
+        border: 2px solid white;
+        outline: none;
+        padding: 10px 10px;
+        font-size: 20px;
+        color: #cac7ff;
+        height: 44px;
+        width: 100px;
+        margin-right: 4px;
+    }
+    
+    .popup-del-form a {
+        display: inline-block;
+        text-decoration: none;
+        background: transparent;
+        border: 2px solid white;
+        outline: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        color: #cac7ff;
+        height: 44px;
+        width: 150px;
+    }
+
+
+
+}
+
+@media (max-width: 480px) {
+    .popup-del {
+        width: 400px;
+    }
+}
 
 
 

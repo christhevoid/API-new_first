@@ -31,8 +31,28 @@ document.addEventListener(`DOMContentLoaded`, function() {
             console.log(res);
             var novelInfo = res.data;
             console.log(novelInfo);
-
             console.log(novelInfo)
+
+            var flag = localStorage.getItem(`flag`);
+            console.log(`Flag: ${flag}`);
+
+            var divBack = document.getElementById(`divback`)
+
+            if (flag == `1`) {
+                
+                divBack.style.display = `block`;
+                var backLink = document.createElement(`a`)
+                backLink.href = `upload_and_delete.html`;
+                backLink.textContent = `Volver al backend`;
+                divBack.appendChild(backLink);
+            }
+
+            if (flag == null) {
+                divBack.style.display = `none`;
+            }
+
+            var flag = `0`;
+            localStorage.setItem(`flag`, flag);
 
         var imgContainer = document.getElementById(`img-container`);
 

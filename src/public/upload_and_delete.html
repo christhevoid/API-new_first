@@ -10,88 +10,115 @@
     </head>
     <body id="Q-body_up_del">
         
-        <div id="nav">
-            <div id="nav-container">
-                <a href="/" class="nav-items">
-                    <p>Inicio</p>
-                </a>
-                <a href="/" class="nav-items">
-                    <p>Biblioteca</p>
-                </a>
-                <a href="/" class="nav-items">
-                    <p>Populares</p>
-                </a>
-                <a href="/" class="nav-items">
-                    <p>Login</p>
-                </a>
+        <div id="curtain" class="curtain">
+
+            <div id="nav">
+                <div id="nav-container">
+                    <a href="/" class="nav-items">
+                        <p>Inicio</p>
+                    </a>
+                    <a href="/" class="nav-items">
+                        <p>Biblioteca</p>
+                    </a>
+                    <a href="/" class="nav-items">
+                        <p>Populares</p>
+                    </a>
+                    <a href="/" class="nav-items">
+                        <p>Login</p>
+                    </a>
+                </div>
+            </div>
+    
+            <div id="search-container">
+                <!-- <p>Buscar</p> -->
+                <a class="addNovel" href="/insert.html"><img src="/pic/book-transparent.png"><p>Insertar novela</p></a>
+                <form action="" class="search-bar" id="search-form">
+                    <input type="text" placeholder="Search" name="q">
+                    <button id="button-submit" type="submit"><img src="/pic/icon_search.png"></button>
+                </form>
+            </div>
+    
+            <!-- <div class="search-container_test">
+                <form action="" class="search-bar">
+                    <input type="text" placeholder="Search" name="q">
+                    <button id="button-submit" type="submit"><img src="/pic/icon_search.png"></button>
+                </form>
+            </div> -->
+    
+            <div id="novels_data_up">
+    
+                <!-- <div class="flex-item-updel">
+    
+                    <div class="img-container-updel">
+                        <img src="public/image-1715962834773.jpg">
+                    </div>
+                    
+                    <div class="data">
+                        <p class="data-title">Dune</p><br>
+                        <p class="data-name">Nombre: Solo Leveling</p><br>
+                        <p class="data-author">Autor: Chugong</p><br>
+                        <p class="data-genre">Genero: Fantasy</p><br>
+                        <p class="data-year">Año de publicación: 2018</p>
+    
+                        <div class="opciones">
+                            <a class="view-more" href="#">Ver más</a>
+                            <a class="upload" href="#">Actualizar</a>
+                            <a class="delete" href="#">Eliminar</a>
+                        </div>
+    
+                    </div>
+    
+                          
+                </div> -->
+    
+                <!-- <div class="flex-item-updel">
+    
+                    <img src="public/image-1715962834773.jpg">
+    
+                    <div class="data">
+                        <p class="data-title">Dune</p><br>
+                        <p class="data-name">Nombre: Solo Leveling</p><br>
+                        <p>Autor: Chugong</p><br>
+                        <p>Genero: Fantasy</p><br>
+                        <p>Año de publicación: 2018</p>
+    
+                        <div class="opciones">
+                            <a href="#">Ver más</a>
+                            <a href="#">Actualizar</a>
+                            <a href="#">Eliminar</a>
+                        </div>
+    
+                    </div>
+    
+                          
+                </div> -->
+    
+                
+                <!-- Aquí van todas las novelas -->
+            </div>
+
+        </div>
+
+        <div id="popup-del" class="popup-del">
+            <div class="popup-head">
+                <img src="/pic/remove_cross_transparent.png">
+                <h2>¿Estás seguro de que quieres eliminar esta novela?</h2>
+            </div>
+            <div>
+                <p>Si quieres eliminar esta novela escribe ELIMINAR</p>
+                <form action="" class="popup-del-form">
+                    <input type="text" name="delete" id="del-input-text" placeholder="ELIMINAR">
+                    <div class="popup-del-options">
+                        <input type="submit" id="del-input-submit" class="del-input-submit" value="Eliminar">
+                        <a href="#" id="btn-back" class="btn-back">Volver atrás</a>
+                    </div>
+                </form>
             </div>
         </div>
 
-        <div id="search-container">
-            <!-- <p>Buscar</p> -->
-            <a class="addNovel" href="/insert.html"><img src="/pic/book-transparent.png"><p>Insertar novela</p></a>
-            <form action="" class="search-bar">
-                <input type="text" placeholder="Search" name="q">
-                <button id="button-submit" type="submit"><img src="/pic/icon_search.png"></button>
-            </form>
-        </div>
-
-        <!-- <div class="search-container_test">
-            <form action="" class="search-bar">
-                <input type="text" placeholder="Search" name="q">
-                <button id="button-submit" type="submit"><img src="/pic/icon_search.png"></button>
-            </form>
-        </div> -->
-
-        <div id="novels_data_up">
-
-            <!-- <div class="flex-item-updel">
-
-                <img src="public/image-1715962834773.jpg">
-
-                <div class="data">
-                    <p class="data-title">Dune</p><br>
-                    <p class="data-name">Nombre: Solo Leveling</p><br>
-                    <p class="data-author">Autor: Chugong</p><br>
-                    <p class="data-genre">Genero: Fantasy</p><br>
-                    <p class="data-year">Año de publicación: 2018</p>
-
-                    <div class="opciones">
-                        <a class="view-more" href="#">Ver más</a>
-                        <a class="upload" href="#">Actualizar</a>
-                        <a class="delete" href="#">Eliminar</a>
-                    </div>
-
-                </div>
-
-                      
-            </div> -->
-
-            <!-- <div class="flex-item-updel">
-
-                <img src="public/image-1715962834773.jpg">
-
-                <div class="data">
-                    <p class="data-title">Dune</p><br>
-                    <p class="data-name">Nombre: Solo Leveling</p><br>
-                    <p>Autor: Chugong</p><br>
-                    <p>Genero: Fantasy</p><br>
-                    <p>Año de publicación: 2018</p>
-
-                    <div class="opciones">
-                        <a href="#">Ver más</a>
-                        <a href="#">Actualizar</a>
-                        <a href="#">Eliminar</a>
-                    </div>
-
-                </div>
-
-                      
-            </div> -->
-
+        <!-- <div id="popup">
             
-            <!-- Aquí van todas las novelas -->
-        </div>
+        </div> -->
 
     </body>
     <script src="/updel.js"></script>
