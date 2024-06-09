@@ -131,6 +131,16 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
                     })
 
+                    uploadOption.addEventListener(`click`, function() {
+
+                        // FLAG
+                        localStorage.setItem(`flag`, flag);
+
+                        // Ir a Ver más detalles
+                        window.location.replace(`/update.html?id=${updelNovelData[index]._id}`)
+
+                    })
+
                     /* Función popup */
 
                     function toggle() {
@@ -174,9 +184,11 @@ document.addEventListener(`DOMContentLoaded`, () => {
                         btn.addEventListener(`click`, toggle)
                     }) */
 
-
-                    var btnBack = document.getElementById(`btn-back`);
+                    /* var btnBack = document.getElementById(`btn-back`);
                     btnBack.addEventListener(`click`, toggle)
+                    btnBack.addEventListener(`click`, () => {
+                        delInputText.value = ``;
+                    }) */
 
                     
 
@@ -228,6 +240,22 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
             
             } // Salida del for
+
+            // ESTA FUNCIÓN ESTA DEFINIDA DOS VECES X2!!!!!!
+            function toggle() {
+                var curtain = document.getElementById(`curtain`);
+                curtain.classList.toggle(`blur`);
+
+                var popup = document.getElementById(`popup-del`);
+                popup.classList.toggle(`visible`);
+            }
+
+            // FUNCIÓN BUTTON BACK
+            var BtnsBack = document.querySelectorAll(`.btn-back`);
+
+            BtnsBack.forEach( (btn) => {
+                btn.addEventListener(`click`, toggle)
+            })
 
             // FUNCIÓN ELIMINAR CON TODAS LAS LETRAS (AHORA SÍ)
             eliminateBtn.addEventListener(`click`, () => {

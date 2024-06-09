@@ -3,6 +3,8 @@
 
 console.log("HOLA ESTO ES INSERT.JS")
 
+var flag = `1`;
+
 document.getElementById(`files`).addEventListener(`change`, function() {
     var label = document.getElementById(`label-image-upload-id`);
     var imgContainer = document.getElementById(`img-selector-container`);
@@ -50,19 +52,56 @@ novelFormHTML.addEventListener(`submit`, function(event) {
         console.log(pair[0] + ': ' + pair[1]);
     } */
 
+    function showPopup() {
+        var curtain = document.getElementById(`curtain`);
+        curtain.classList.add(`blur`);
+
+        var popup = document.getElementById(`popup-in`);
+        popup.classList.add(`visible`);
+    }
+
+    function hidePopup() {
+        var curtain = document.getElementById(`curtain`);
+        curtain.classList.remove(`blur`);
+        var popup = document.getElementById(`popup-in`);
+        popup.classList.remove(`visible`);
+    }
+
+    // Muestra el popup al dar submit (puedes ajustar este evento según tus necesidades)
+    showPopup();
+
+    // Oculta el popup al hacer clic en el botón
+    var btnBackIn = document.getElementById('btn-back-in');
+    btnBackIn.addEventListener('click', hidePopup);
+    
+
     axios.post(`http://localhost:9000/api/novels`, formData) 
     .then(function(res) {
 
         if(res.status==200) {
             console.log(res);
+            console.log(res.data)
+            console.log(res.data._id)
             console.log("¡Novela añadida correctamente!")
-            alert(`Se ha agregado la novela correctamente`)
+            /* alert(`Se ha agregado la novela correctamente`) */
             novelFormHTML.reset();
+
+            var viewAddNovel = document.getElementById(`view-add-novel`);
+            viewAddNovel.addEventListener(`click`, () => {
+
+                // FLAG
+                localStorage.setItem(`flag`, flag);
+
+                // Ir a Ver más detalles
+                window.location.replace(`/novel.html?id=${res.data._id}`);
+            })
+
         } else {
             console.log(`Error al insertar novela`)
         }
         
     }
+
 )
 
 })

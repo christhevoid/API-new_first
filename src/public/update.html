@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Backend: Add Novel</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body id="Q-body_update">
+
+        <div id="curtain" class="curtain">
+
+            <div id="nav">
+                <div id="nav-container">
+                    <a href="/" class="nav-items">
+                        <p>Inicio</p>
+                    </a>
+                    <a href="/" class="nav-items">
+                        <p>Biblioteca</p>
+                    </a>
+                    <a href="/" class="nav-items">
+                        <p>Populares</p>
+                    </a>
+                    <a href="/" class="nav-items">
+                        <p>Login</p>
+                    </a>
+                </div>
+            </div>
+            
+            <div id="form-container-update">
+
+                <h2 id="Update-title">Update novel</h2>
+
+                <form id="novelFormUpdate" enctype="multipart/form-data">
+
+                    <div id="part-img" class="part-img">
+
+                        <div class="img-container">
+                            <img id="img-up">
+                        </div>
+                        
+                        <div id="img-selector-container">
+                            <p>Select image: </p>
+                            <label for="files" class="label-image-upload" id="label-image-upload-id">
+                                Choose Image
+                            </label>
+                            <input type="file" name="image" id="files" accept="image/*">
+                        </div>
+                    </div>
+    
+                    <div id="part-data" class="part-data">
+                        <input id="input-up-name" type="text" name="name" class="input-update" placeholder="Name">
+                        <input id="input-up-author" type="text" name="author" class="input-update" placeholder="Author">
+                        <input id="input-up-genre" type="text" name="genre" class="input-update" placeholder="Genre">
+                        <input id="input-up-pubYear" type="text" name="publishedYear" class="input-update" placeholder="Published Year">
+                        <input id="input-up-pages" type="number" name="pages" class="input-update" placeholder="Pages">
+                        <input id="input-up-lang" type="language" name="language" class="input-update" placeholder="Language">
+                        <textarea id="input-up-description" name="description" class="input-update" id="description-update" placeholder="Description"></textarea>
+                        <input id="submit-button-upload" type="submit" value="Update novel">
+                    </div>
+                    
+    
+                    <!-- Seleccionar la imagen de mi maquina local -->
+    
+                    
+    
+                    <!-- Para ver el nombre de la imagen seleccionada -->
+    
+                    <!-- <p id="fileName"></p> -->
+
+                    <!-- <div id="part-submit">
+
+                    </div> -->
+    
+    
+                </form>
+    
+            </div>
+
+        </div>
+
+        <div id="popup-up" class="popup-up">
+            <div class="popup-head">
+                <img src="/pic/book-transparent.png">
+                <h2>¡Has actualizado con exito esta novela!</h2>
+            </div>
+            <div id="button-container">
+                <button href="#" id="btn-back-in">Volver atrás</button>
+                <button href="#" id="view-add-novel">Ver novela</button>
+            </div>
+        </div>
+        
+
+    </body>
+    <script src="/update.js"></script>
+</ht=""

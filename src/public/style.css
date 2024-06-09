@@ -155,7 +155,7 @@ div#form-container {
 
 #form-container form {
 
-    width: calc(100% -20px);
+    width: calc(100% - 20px);
     margin: 0 20px;
 
     display: flex;
@@ -173,11 +173,11 @@ div#form-container {
 }
 
 .input {
-    width: calc(100%-20px);
+    width: calc(100% - 40px);
     height: 40px;
     background: transparent;
     color: white;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 20px 10px 10px;
     border-radius: 12px;
     border: 2px solid rgba(255, 255, 255, 0.331);
     padding-left: 10px; /* PARA MOVER EL INICIO DEL TEXTO!!!1 */
@@ -199,9 +199,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
     height: 40px;
     background: transparent;
-    width: calc(100%-20px);
-    max-width: 100%;
-    min-width: calc(100%-20px);
+    width: calc(100% - 40px);
+    max-width: calc(100% - 40px);
+    /* min-width: calc(100%-20px); */
     border-radius: 12px;
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.331);
@@ -245,6 +245,8 @@ input[type="file"] {
 }
 
 #submit-button {
+    width: calc(100% - 40px);
+    margin: 10px 10px 20px 10px;
     font-size: 20px;
     padding: 10px 20px;
     color: white;
@@ -253,13 +255,74 @@ input[type="file"] {
     border: 1px solid white;
     border-radius: 8px;
     cursor: pointer;
-    margin: 0 0 20px 0;
     transition: 0.4s ease;
 }
 
 #submit-button:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
+}
+
+/* ________________ POPUP-IN _________________ */
+
+.popup-in {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: transparent;
+    filter: blur(0px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border: 2px solid white;
+}
+
+.popup-in.visible {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.popup-in h2 {
+    color: white;
+}
+
+.popup-in p {
+    color: white;
+}
+
+.popup-in img {
+    width: 94px;
+    margin-right: 2%;
+}
+
+#button-container {
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#button-container button {
+    background: transparent;
+    /* flex: 1;  */
+    border: 2px solid white;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #cac7ff;
+    height: 44px;
+    width: 200px;
+    cursor: pointer;
+}
+
+#button-container button:hover {
+    background: rgba(240, 248, 255, 0.2);
+    color: #fff;
 }
 
 
@@ -675,7 +738,7 @@ user-select: none: para que el usuario no pueda selecccionar el texto*/
 .del-input-submit.deleteable {
     pointer-events: auto;
     user-select: auto;
-    background: rgba(255, 11, 11, 0.5);
+    background: rgba(255, 11, 11, 0.6);
     color: #fff;
 }
 
@@ -730,6 +793,24 @@ a.btn-back:hover {
         display: flex;
         margin-top: 12px;
         justify-content: space-between;
+    }
+
+    /* popup in */
+
+    .popup-in {
+        width: 512px;
+    }
+
+    #button-container {
+        flex-direction: column;
+    }
+
+    #button-container button {
+        width: 100%;
+    }
+
+    #view-add-novel {
+        margin-top: 10px;
     }
 }
 
@@ -860,6 +941,24 @@ a.btn-back:hover {
         width: 150px;
     }
 
+    /* popup in */
+
+    .popup-in {
+        width: 445px;
+    }
+
+    #button-container {
+        flex-direction: column;
+    }
+
+    #button-container button {
+        width: 100%;
+    }
+
+    #view-add-novel {
+        margin-top: 10px;
+    }
+
 
 
 }
@@ -868,9 +967,241 @@ a.btn-back:hover {
     .popup-del {
         width: 400px;
     }
+
+    .popup-in {
+        width: 400px;
+}
+
+
+
+
 }
 
 
 
 
 
+/* ___________________________________________ UPDATE ____________________________________________________ */
+
+#Q-body_update {
+    background-image: url(/pic/dark-world.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+#Update-title {
+    color:white;
+    padding: 15px 0 15px 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+div#form-container-update {
+    /* display: flex;
+    flex-direction: column; */
+    margin: 20px 6.8%;
+
+    border: 1px solid white;
+    border-radius: 12px;
+    background: transparent; 
+    backdrop-filter: blur(4px);
+}
+
+#form-container-update form {
+
+    width: calc(100% - 20px);
+    margin: 0 20px;
+
+    display: flex;
+    flex-direction: row;
+
+    /* align-items: center; */
+
+    background: transparent;
+    backdrop-filter: blur(10px);
+
+}
+
+/* #form-container form h2 {
+    text-align: center;
+} */
+
+/* IMG PART */
+.img-container {
+    width: auto;
+    height: auto;
+}
+
+.img-container img {
+    width: 380px;
+    border-radius: 12px;
+}
+
+/* DATA PART */
+.part-data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.part-data .input-update {
+    width: calc(100% - 40px);
+    height: 40px;
+    background: transparent;
+    color: white;
+    margin: 10px 20px 10px 10px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.331);
+    padding-left: 10px; /* PARA MOVER EL INICIO DEL TEXTO!!!1 */
+    font-size: 15px;
+}
+
+.part-data .input-update:hover {
+    color: white;
+}
+
+
+.input-update::placeholder {
+    color: white;
+    /* font-size: 15px; */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.part-data #description-update {
+
+    height: 115px;
+    max-height: 115px;
+    background: transparent;
+    border-radius: 12px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.331);
+
+    padding: 5px 0 0 10px;
+    font-size: 15px;
+
+    width: calc(100% - 40px);
+    max-width: calc(100% - 40px);
+}
+
+#img-selector-container {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+#img-selector-container p {
+    color: white;
+}
+
+.label-image-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px 0 10px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.label-image-upload.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.label-image-upload:hover {
+    background-color: rgba(255, 255, 255, 0.251);
+    color: white;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#submit-button-upload {
+    font-size: 20px;
+    padding: 10px 20px;
+    color: white;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    width: calc(100% - 40px);
+    margin: 10px 10px 20px 10px;
+    transition: 0.4s ease;
+}
+
+#submit-button-upload:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* ________________ POPUP-IN _________________ */
+
+.popup-up {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: transparent;
+    filter: blur(0px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border: 2px solid white;
+}
+
+.popup-up.visible {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.popup-in h2 {
+    color: white;
+}
+
+.popup-in p {
+    color: white;
+}
+
+.popup-in img {
+    width: 94px;
+    margin-right: 2%;
+}
+
+#button-container {
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#button-container button {
+    background: transparent;
+    /* flex: 1;  */
+    border: 2px solid white;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #cac7ff;
+    height: 44px;
+    width: 200px;
+    cursor: pointer;
+}
+
+#button-container button:hover {
+    background: rgba(240, 248, 255, 0.2);
+    color: #fff;
+}
