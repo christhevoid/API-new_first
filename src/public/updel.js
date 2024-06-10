@@ -291,7 +291,35 @@ document.addEventListener(`DOMContentLoaded`, () => {
                 
 
             })
-            
+
+            // Buscador 
+
+            var searchBar = document.getElementById(`buscador`) 
+
+
+            searchBar.addEventListener(`keyup`, (e) => {
+
+                console.log(e.target.value); 
+
+                if (e.key === `Escape`) { 
+                    console.log(e.target); 
+                    e.target.value = ``; 
+                }
+
+                
+                if (e.target.matches(`#buscador`)) { 
+                    /* console.log(`MATCHES OK`) */
+                    document.querySelectorAll(`.flex-item-updel`).forEach( novel => {
+                        
+                        novel.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                        ?novel.classList.remove(`filtro`)
+                        :novel.classList.add(`filtro`)
+                    })
+                }
+                    
+
+            } )
+
 
         }
 

@@ -2,6 +2,8 @@
 
 console.log(`Estas en UPDATE`);
 
+var flag = `1`;
+
 document.addEventListener(`DOMContentLoaded`, function() {
 
     /* var novelInfo = null; */
@@ -56,6 +58,30 @@ document.addEventListener(`DOMContentLoaded`, function() {
             formDataUpdate.addEventListener(`submit`, function(event) {
                 event.preventDefault(); //Previene la reedirección
                 console.log(`Prevent Default ejecutado`);
+                
+
+                // Función popup
+                function showPopup() {
+                    var curtain = document.getElementById(`curtain`);
+                    curtain.classList.add(`blur`);
+            
+                    var popup = document.getElementById(`popup-up`);
+                    popup.classList.add(`visible`);
+                }
+            
+                function hidePopup() {
+                    var curtain = document.getElementById(`curtain`);
+                    curtain.classList.remove(`blur`);
+                    var popup = document.getElementById(`popup-up`);
+                    popup.classList.remove(`visible`);
+                }
+            
+                // Muestra el popup al dar submit (puedes ajustar este evento según tus necesidades)
+                showPopup();
+            
+                // Oculta el popup al hacer clic en el botón
+                var btnBackIn = document.getElementById('btn-back-in');
+                btnBackIn.addEventListener('click', hidePopup);
 
                 var formData = new FormData(formDataUpdate);
 
@@ -67,8 +93,21 @@ document.addEventListener(`DOMContentLoaded`, function() {
                     console.log(res.data)
                     console.log(res.data._id)
                     console.log("¡Novela actualizada correctamente!")
-                    alert(`Se ha actualizado la novela correctamente`)
+                    /* alert(`Se ha actualizado la novela correctamente`) */
                     console.log(novelInfo)
+
+
+                    // Click en button 
+                    var viewAddNovel = document.getElementById(`view-add-novel`);
+                    viewAddNovel.addEventListener(`click`, () => {
+
+                    // FLAG
+                    localStorage.setItem(`flag`, flag);
+
+                    // Ir a Ver más detalles
+                    window.location.replace(`/novel.html?id=${novelInfo._id}`);
+            })
+
                 }
                 
             })

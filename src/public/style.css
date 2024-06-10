@@ -27,8 +27,7 @@
         12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
         22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
         41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-        100px 100px 80px rgba(0, 0, 0, 0.07)
-        ;
+        100px 100px 80px rgba(0, 0, 0, 0.07);
 
     display: flex;
     align-items: center;
@@ -36,7 +35,7 @@
     background: transparent;
     backdrop-filter: blur(16px);
     filter: brightness(1);
-    
+
 }
 
 #nav-container {
@@ -118,13 +117,71 @@
 }
 
 .flex-item p {
-    width:auto;
+    width: auto;
     text-align: center;
     font-size: 1.2em;
     /* font-weight: bold; */
     margin-top: 3px;
-    color:white;
+    color: white;
 }
+
+/* Footer */
+
+#footer-backend {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    /* border: 2px solid black; */
+    /* border-radius: 12px; */
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07)
+        ;
+
+    display: flex;
+    align-items: center;
+
+    background: transparent;
+    backdrop-filter: blur(16px);
+    filter: brightness(1);
+}
+
+#footer-backend a {
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid white;
+    transition: 0.3s ease;
+    color: white;
+}
+
+#acceso_backend {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#footer-backend a:hover {
+    background: rgba(240, 248, 255, 0.2);
+    color: #fff;
+}
+
+
+#acceso_up_del {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    margin-left: 20px;
+}
+
+
+
 
 /* ____________________________________________ INSERT.HTML _______________________________________________ */
 
@@ -135,11 +192,58 @@
     background-position: center center;
 }
 
+.title-container {
+    margin: 20px 0 15px 0;
+}
+
+.back-to-backend {
+    height: auto;
+    position: absolute;
+    margin-left: 1%;
+
+    text-decoration: none;
+    padding: 0 2px;
+    border: 2px solid white;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.back-to-backend:hover {
+    background: rgba(240, 248, 255, 0.2);
+}
+
+.back-to-backend a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.back-to-backend img {
+    width: 35px;
+}
+
 #Insert-title {
-    color:white;
-    padding: 15px 0 5px 0;
+    color: white;
     font-size: 30px;
 }
+
+/* #data-container a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#data-container a:hover {
+    background: rgba(240, 248, 255, 0.2);
+} */
 
 
 div#form-container {
@@ -149,7 +253,7 @@ div#form-container {
 
     border: 1px solid white;
     border-radius: 12px;
-    background: transparent; 
+    background: transparent;
     backdrop-filter: blur(4px);
 }
 
@@ -180,7 +284,8 @@ div#form-container {
     margin: 10px 20px 10px 10px;
     border-radius: 12px;
     border: 2px solid rgba(255, 255, 255, 0.331);
-    padding-left: 10px; /* PARA MOVER EL INICIO DEL TEXTO!!!1 */
+    padding-left: 10px;
+    /* PARA MOVER EL INICIO DEL TEXTO!!!1 */
     font-size: 15px;
 }
 
@@ -348,7 +453,7 @@ input[type="file"] {
     display: flex;
 
     background: transparent;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(120px);
     filter: brightness(1.2);
 
     /* flex-wrap: wrap; */
@@ -420,12 +525,12 @@ input[type="file"] {
 
     #novela_container {
         /* border: 3px solid black; */
-    
+
         width: 96%;
         margin: 2%;
-    
+
         display: flex;
-    
+
         flex-direction: column;
     }
 
@@ -433,12 +538,12 @@ input[type="file"] {
 
         width: 100%;
         height: 370px;
-    
+
         margin: 10px;
         /* border: 3px solid black; */
         text-align: center;
     }
-    
+
     #img-container img {
         margin: 20px 0;
         height: 100%;
@@ -451,19 +556,19 @@ input[type="file"] {
         margin: 0;
         margin-top: 20px;
         /* border: 3px solid black; */
-    
+
     }
 
     #data-container h2 {
         margin: 17px 0 20px 3%;
-    
+
         color: white;
     }
 
     #data-container p {
         width: 94%;
         margin: 0 3% 0 3%;
-    
+
         color: white;
     }
 
@@ -486,7 +591,7 @@ input[type="file"] {
 
     /* border: 1px solid white; */
     border-radius: 12px;
-    background: transparent; 
+    background: transparent;
     backdrop-filter: blur(4px);
 
     display: flex;
@@ -555,7 +660,7 @@ input[type="file"] {
 
 .search-bar input {
     background: transparent;
-    flex: 1; 
+    flex: 1;
     border: 0;
     outline: none;
     padding: 10px 20px;
@@ -591,7 +696,7 @@ input[type="file"] {
 
     border: 1px solid white;
     border-radius: 12px;
-    background: transparent; 
+    background: transparent;
     backdrop-filter: blur(4px);
 
 }
@@ -627,7 +732,7 @@ input[type="file"] {
     width: 100%;
     font-size: 25px;
     font-weight: bold;
-    color:white;
+    color: white;
 }
 
 
@@ -648,6 +753,10 @@ input[type="file"] {
 
 .opciones a:hover {
     background-color: rgba(240, 248, 255, 0.2);
+}
+
+.filtro {
+    display: none;
 }
 
 /* ____________________ POPUP-DEL ________________*/
@@ -775,207 +884,7 @@ a.btn-back:hover {
     color: white;
 }
 
-/* Si popup-del tiene 600px */
-@media (max-width: 630px) {
-    .popup-del {
-        width: 512px;
-    }
 
-    .popup-del-form {
-        flex-direction: column;
-    }
-
-    .popup-del-form #del-input-text {
-        width: 100%;
-    }
-
-    .popup-del-options {
-        display: flex;
-        margin-top: 12px;
-        justify-content: space-between;
-    }
-
-    /* popup in */
-
-    .popup-in {
-        width: 512px;
-    }
-
-    #button-container {
-        flex-direction: column;
-    }
-
-    #button-container button {
-        width: 100%;
-    }
-
-    #view-add-novel {
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 500px) {
-
-    #search-container {
-        margin: 20px 6.8%;
-    
-        /* border: 1px solid white; */
-        border-radius: 12px;
-        background: transparent; 
-        backdrop-filter: blur(4px);
-    
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column-reverse;
-    }
-
-    .search-bar {
-        width: 97.5%;
-    }
-
-    .flex-item-updel {
-        display: flex;
-        flex-direction: column;
-        width: calc(100% - 40px);
-        min-height: calc(100% - 40px);
-
-        margin: 20px 20px;
-
-        border: 2px solid white;
-    }
-
-    .img-container-updel {
-        margin-top: 15px;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        /* border: 2px solid red; */
-        
-    }
-
-    .opciones {
-        margin: 40px 0 12px 30px;
-        display: flex;
-        flex-direction: column;
-        /* border: 2px solid red; */
-    }
-
-    .opciones a {
-        text-decoration: none;
-        text-align: center;
-        color: white;
-        border: 2px solid white;
-        margin: 0 20px 10px 0;
-        padding: 15px 25px;
-        font-size: 20px;
-        cursor: pointer;
-    }
-
-    /* POPUP-DEL */
-    
-    .popup-del {
-        position: fixed;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 445px;
-        padding: 30px;
-        box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
-        background: transparent;
-        filter: blur(0px);
-        /* visibility: hidden; */
-        /* opacity: 0; */
-        transition: 0.5s;
-        border: 2px solid white;
-    }
-
-    .popup-del-form {
-        margin: 18px 0 0 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    .popup-del-form #del-input-text {
-        background: transparent;
-        /* flex: 1;  */
-        border: 2px solid white;
-        outline: none;
-        padding: 10px 15px;
-        font-size: 20px;
-        color: #cac7ff;
-        height: 44px;
-        width: 100%;
-    }
-
-    .popup-del-options {
-        display: flex;
-        margin-top: 12px;
-        justify-content: space-between;
-    }
-    
-    .popup-del-form #del-input-submit {
-        background: transparent;
-        border: 2px solid white;
-        outline: none;
-        padding: 10px 10px;
-        font-size: 20px;
-        color: #cac7ff;
-        height: 44px;
-        width: 100px;
-        margin-right: 4px;
-    }
-    
-    .popup-del-form a {
-        display: inline-block;
-        text-decoration: none;
-        background: transparent;
-        border: 2px solid white;
-        outline: none;
-        padding: 10px 15px;
-        font-size: 20px;
-        color: #cac7ff;
-        height: 44px;
-        width: 150px;
-    }
-
-    /* popup in */
-
-    .popup-in {
-        width: 445px;
-    }
-
-    #button-container {
-        flex-direction: column;
-    }
-
-    #button-container button {
-        width: 100%;
-    }
-
-    #view-add-novel {
-        margin-top: 10px;
-    }
-
-
-
-}
-
-@media (max-width: 480px) {
-    .popup-del {
-        width: 400px;
-    }
-
-    .popup-in {
-        width: 400px;
-}
-
-
-
-
-}
 
 
 
@@ -991,11 +900,39 @@ a.btn-back:hover {
 }
 
 #Update-title {
-    color:white;
+    color: white;
     padding: 15px 0 15px 0;
     font-size: 30px;
     text-align: center;
 }
+
+.back-to-backend-up {
+    height: auto;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+
+    text-decoration: none;
+    padding: 0 2px;
+    border: 2px solid white;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.back-to-backend-up:hover {
+    background: rgba(240, 248, 255, 0.2);
+}
+
+.back-to-backend-up a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.back-to-backend-up img {
+    width: 35px;
+}
+
 
 
 div#form-container-update {
@@ -1005,7 +942,7 @@ div#form-container-update {
 
     border: 1px solid white;
     border-radius: 12px;
-    background: transparent; 
+    background: transparent;
     backdrop-filter: blur(4px);
 }
 
@@ -1055,7 +992,8 @@ div#form-container-update {
     margin: 10px 20px 10px 10px;
     border-radius: 12px;
     border: 2px solid rgba(255, 255, 255, 0.331);
-    padding-left: 10px; /* PARA MOVER EL INICIO DEL TEXTO!!!1 */
+    padding-left: 10px;
+    /* PARA MOVER EL INICIO DEL TEXTO!!!1 */
     font-size: 15px;
 }
 
@@ -1204,4 +1142,256 @@ input[type="file"] {
 #button-container button:hover {
     background: rgba(240, 248, 255, 0.2);
     color: #fff;
+}
+
+.popup-up {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: transparent;
+    filter: blur(0px);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border: 2px solid white;
+}
+
+.popup-up h2 {
+    color: white;
+}
+
+.popup-up.visible {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/* Si popup-del tiene 600px */
+@media (max-width: 630px) {
+    .popup-del {
+        width: 512px;
+    }
+
+    .popup-del-form {
+        /* align-items: center; */
+        flex-direction: column;
+    }
+
+    .popup-del-form #del-input-text {
+        width: 100%;
+    }
+
+    .popup-del-options {
+        display: flex;
+        margin-top: 12px;
+        justify-content: space-between;
+    }
+
+    /* popup in */
+
+    .popup-in {
+        width: 512px;
+    }
+
+    #button-container {
+        flex-direction: column;
+    }
+
+    #button-container button {
+        width: 100%;
+    }
+
+    #view-add-novel {
+        margin-top: 10px;
+    }
+
+    /* popup-up */
+
+    #form-container-update form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+
+    #search-container {
+        margin: 20px 6.8%;
+
+        /* border: 1px solid white; */
+        border-radius: 12px;
+        background: transparent;
+        backdrop-filter: blur(4px);
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .search-bar {
+        width: 97.5%;
+    }
+
+    .flex-item-updel {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 40px);
+        min-height: calc(100% - 40px);
+
+        margin: 20px 20px;
+
+        border: 2px solid white;
+    }
+
+    .img-container-updel {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* border: 2px solid red; */
+
+    }
+
+    .opciones {
+        margin: 40px 0 12px 30px;
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid red; */
+    }
+
+    .opciones a {
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        border: 2px solid white;
+        margin: 0 20px 10px 0;
+        padding: 15px 25px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* POPUP-DEL */
+
+    .popup-del {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 445px;
+        padding: 30px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+        background: transparent;
+        filter: blur(0px);
+        /* visibility: hidden; */
+        /* opacity: 0; */
+        transition: 0.5s;
+        border: 2px solid white;
+    }
+
+    .popup-del-form {
+        margin: 18px 0 0 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .popup-del-form #del-input-text {
+        background: transparent;
+        /* flex: 1;  */
+        border: 2px solid white;
+        outline: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        color: #cac7ff;
+        height: 44px;
+        width: 100%;
+    }
+
+    .popup-del-options {
+        display: flex;
+        margin-top: 12px;
+        justify-content: space-between;
+    }
+
+    .popup-del-form #del-input-submit {
+        background: transparent;
+        border: 2px solid white;
+        outline: none;
+        padding: 10px 10px;
+        font-size: 20px;
+        color: #cac7ff;
+        height: 44px;
+        width: 100px;
+        margin-right: 4px;
+    }
+
+    .popup-del-form a {
+        display: inline-block;
+        text-decoration: none;
+        background: transparent;
+        border: 2px solid white;
+        outline: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        color: #cac7ff;
+        height: 44px;
+        width: 150px;
+    }
+
+    /* popup in */
+
+    .popup-in {
+        width: 445px;
+    }
+
+    #button-container {
+        flex-direction: column;
+    }
+
+    #button-container button {
+        width: 100%;
+    }
+
+    #view-add-novel {
+        margin-top: 10px;
+    }
+
+    /* popup-up */
+    .popup-up {
+        width: 445px;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+
+    #form-container-update form {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .popup-del {
+        width: 400px;
+    }
+
+    .popup-in {
+        width: 400px;
+    }
+
+    .popup-up {
+        width: 400px;
+    }
 }
